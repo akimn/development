@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131122050635) do
+ActiveRecord::Schema.define(version: 20131122071004) do
 
   create_table "pins", force: true do |t|
     t.string   "locationBuilding"
