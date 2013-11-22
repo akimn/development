@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<%= image_tag @pin.image.url(:medium) %>
 
 <p>
   <strong>Locationbuilding:</strong>
@@ -10,5 +10,7 @@
   <%= @pin.concern %>
 </p>
 
-<%= link_to 'Edit', edit_pin_path(@pin) %> |
+<% if @pin.user == current_user %>
+	<%= link_to 'Edit', edit_pin_path(@pin) %> |
+<% end %>
 <%= link_to 'Back', pins_path %>
