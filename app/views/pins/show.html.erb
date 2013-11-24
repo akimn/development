@@ -1,12 +1,15 @@
 <%= image_tag @pin.image.url(:medium) %>
 
+<p>
+	<%= @pin.created_at.strftime("%b %d, %Y") %>
+</p>
 
 <p>
   <strong><%= @pin.locationBuilding %></strong>
 </p>
 
 <p>
-  <strong>Locationbuilding:</strong>
+  <strong>Location/Building:</strong>
   <%= @pin.locationBuilding %>
 </p>
 

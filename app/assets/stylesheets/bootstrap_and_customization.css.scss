@@ -1,11 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/css?family=Bangers:400,700);
+@import url(http://fonts.googleapis.com/css?family=Bangers);
 
-$body-bg:                                                   #ecf0f1;
-$font-family-sans-serif:                'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$navbar-height:                                        45px;
-$navbar-default-bg:                          white;
-$navbar-default-brand-color:      #c0392b;
-$brand-primary:                                    #c0392b;
+$body-bg:                                              white;
+$font-family-sans-serif:      'lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-height:                                        44px;
+$navbar-default-bg:                          		   #C3C3C3;
+$navbar-default-brand-color:     					   #F8FA61;
+$navbar-brand-size:									19px;
+$brand-primary:                                 	   #C1A5EA;
 $jumbotron-bg:                                         white;
 
 @import 'bootstrap';
@@ -15,5 +17,6 @@ $jumbotron-bg:                                         white;
 }
 
 .navbar-brand {
-     font-weight: bold;
+	  font-weight: normal;
+	  
 }
