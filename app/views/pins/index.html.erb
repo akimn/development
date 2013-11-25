@@ -8,8 +8,8 @@
       <div class="panel body">
         <%= pin.created_at.strftime("%b %d, %Y") %><br/>
         <%= pin.locationBuilding %><br/>
-        <%= pin.concern %><br/>
-        <%= pin.user.email if pin.user %><br>
+        <%= pin.concern %><br/>by 
+        <%= pin.user.name if pin.user %><br>
         
         <% if pin.user == current_user %>
         <div class="actions">
@@ -25,4 +25,4 @@
 
 <div class="center">
   <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
-</end>
+</div>
