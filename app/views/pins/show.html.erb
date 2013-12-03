@@ -1,11 +1,6 @@
-<%= image_tag @pin.image.url(:medium) %>
 
 <p>
-	<%= @pin.created_at.strftime("%b %d, %Y") %>
-</p>
-
-<p>
-  <strong><%= @pin.locationBuilding %></strong>
+<%= @pin.created_at.strftime("%b %d, %Y") %>
 </p>
 
 <p>
@@ -18,11 +13,20 @@
   <%= @pin.concern %>
 </p>
 
-<p>
+<%= image_tag @pin.image.url(:medium) %>
+
+<p>by 
   <%= @pin.user.name %>
 </p>
 
+
+
+
+
 <% if @pin.user == current_user %>
-	<%= link_to 'Edit', edit_pin_path(@pin) %> |
+<%= link_to 'Edit', edit_pin_path(@pin) %> |
 <% end %>
 <%= link_to 'Back', pins_path %>
+
+
+

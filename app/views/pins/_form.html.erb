@@ -18,7 +18,7 @@
     <%= f.file_field :image, class: "form-control" %>
   </div>
   <!--copy one of these things for a category-->
-
+  <H6>Don't worry about changing your picture during edit, leave it as is and you'll still have your old pic.</h6>
   <div class="form-group">
     <%= f.label :locationBuilding %>
     <%= f.text_field :locationBuilding, class: "form-control" %>
@@ -26,10 +26,11 @@
 
   <div class="form-group">
     <%= f.label :concern %>
-    <%= f.text_field :concern, class: "form-control" %>
+    <%= f.text_field :concern, as: :text, text_field_html: { rows: "3" }, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.submit class: "btn btn-primary" %>
+    <%= f.submit class: "btn btn-primary" %><br/><p>"Don't use the force, let it load." #fixthiscampus</p>
   </div>
+
 <% end %>

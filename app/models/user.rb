@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :pins
+  acts_as_liker
 
    validates :name, presence: true
 end
