@@ -4,13 +4,10 @@ class PinsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   
   def index
-    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 70)
-    if @pins.search 
-      @search = Pin.search(params[:id])
-      @pins = @search.result
-    else
-      'no results'
-    end #just put the third line of stuff for default setting
+    #@pins = Pin.search(params[:search])
+   
+      @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 70)
+ 
   end
 
   
