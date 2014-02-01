@@ -19,7 +19,7 @@ class Pin < ActiveRecord::Base
 
 	def self.search(search)
 	 if search	
-      	where('"locationBuilding" ILIKE ? OR "concern" ILIKE ? OR "clergyName" ILIKE ?', "%#{search}%", "%#{search}%", "%#{search}%")
+      	where('"locationBuilding" ILIKE ? OR concern ILIKE ? OR clergyname ILIKE ?', "%#{search}%", "%#{search}%", "%#{search}%")
 	  else
 	    scoped
 	 end
