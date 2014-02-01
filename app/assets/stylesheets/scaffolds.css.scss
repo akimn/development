@@ -3,12 +3,12 @@ body {
   color: #333;
   font-family: helvetica, arial, helvetica, sans-serif;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 18px;
 }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, Bangers;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 18px;
 }
 
@@ -41,13 +41,13 @@ div {
 
 .field_with_errors {
   padding: 2px;
-  background-color: red;
+  background-color: green;
   display: table;
 }
 
 #error_explanation {
   width: 450px;
-  border: 2px solid red;
+  border: 2px solid green;
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
@@ -63,7 +63,7 @@ div {
     color: #fff;
   }
   ul li {
-    font-size: 1px;
+    font-size: 12px;
     list-style: square;
   }
 }

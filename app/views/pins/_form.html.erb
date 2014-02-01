@@ -13,24 +13,26 @@
 
 
 
-  <div class="form-group">
-    <%= f.label :image %>
-    <%= f.file_field :image, class: "form-control" %>
-  </div>
-  <!--copy one of these things for a category-->
-  <H6>Don't worry about changing your picture during edit, leave it as is and you'll still have your old pic.</h6>
-  <div class="form-group">
-    <%= f.label :locationBuilding %>
+   <div class="form-group">
+    <%= f.label "Church Name" %>
     <%= f.text_field :locationBuilding, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :concern %>
+    <%= f.label "Clergy Name" %>
+    <%= f.text_field :pastor_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Comment" %>
     <%= f.text_field :concern, as: :text, text_field_html: { rows: "3" }, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.submit class: "btn btn-primary" %><br/><p>"Don't use the force, let it load." #fixthiscampus</p>
+    <%= f.submit class: "btn btn-primary" %>
+  </br>
+</br>
+    <p>"Don't use the force, let it load." #fixthiscampus</p>
   </div>
 
 <% end %>

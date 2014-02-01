@@ -1,13 +1,12 @@
-@import url(http://fonts.googleapis.com/css?family=Bangers:400,700);
-@import url(http://fonts.googleapis.com/css?family=Bangers);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
 $body-bg:                                              white;
 $font-family-sans-serif:      'lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$navbar-height:                                        20px;
-$navbar-default-bg:                          		   #C3C3C3;
-$navbar-default-brand-color:     					   #F8FA61;
+$navbar-height:                                        45px;
+$navbar-default-bg:                          		   white;
+$navbar-default-brand-color:     					   #555555;
 $navbar-brand-size:									19px;
-$brand-primary:                                 	   #C1A5EA;
+$brand-primary:                                 	   #c6c6c6;
 $jumbotron-bg:                                         white;
 
 @import 'bootstrap';

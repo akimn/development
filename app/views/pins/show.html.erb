@@ -1,32 +1,48 @@
+<%= link_to 'BACK', pins_path %>
+<p id="notice"><%= notice %></p>
 
-<p>
-<%= @pin.created_at.strftime("%b %d, %Y") %>
-</p>
+<div class="row">
+	<div class="col-md-offset-2 col-md-8">
+		<div class="panel panel-default">
+			<div class="panel-heading center">
+				<!--<%= image_tag @pin.image.url %>-->
+				<!--<%= image_tag @pin.image.url(:medium) %>-->
+				<p>
+				  <!--<strong>Church Name:</strong><br>-->
+				  <h2><%= @pin.locationBuilding %></h2>
+				</p>
 
-<p>
-  <strong>Location/Building:</strong>
-  <%= @pin.locationBuilding %>
-</p>
+				<p>
+				  <!--<strong>Pastor or Worship Leader Name:</strong><br>-->
+				  <h4><%= @pin.pastor_name %></h4>
+				</p>
 
-<p>
-  <strong>Concern:</strong>
-  <%= @pin.concern %>
-</p>
+				<p>
+				  <!--<strong>Comment:</strong>-->
+				  <%= @pin.concern %>
+				</p>
 
-<%= image_tag @pin.image.url(:medium) %>
+				<p><h5>
+					by <%= @pin.user.name if @pin.user %></h5>
+				</p>
 
-<p>by 
-  <%= @pin.user.name %>
-</p>
+				<p>
+					<h6><%= @pin.created_at.strftime("%b %d, %Y") %></h6>
+				</p>
+			</br>
 
+					<% if @pin.user == current_user %>	
 
-
-
-
-<% if @pin.user == current_user %>
-<%= link_to 'Edit', edit_pin_path(@pin) %> |
-<% end %>
-<%= link_to 'Back', pins_path %>
+					<%= link_to 'EDIT', edit_pin_path(@pin), class: "btn btn-primary btn-xs" %>
+				
+			</div>
+				 
+				<% end %>
+				
+			</div>
+		</div>
+	</div>
+</div>
 
 
 

@@ -1,5 +1,5 @@
-<body>
-	<nav class="navbar navbar-static-top navbar-default" role="navigation">
+
+<nav class="navbar navbar-static-top navbar-default" role="navigation">
   <div class="container">
 	  <!-- Brand and toggle get grouped for better mobile display -->
 	  <div class="navbar-header">
@@ -11,7 +11,9 @@
 	      <span class="icon-bar"></span>
 	      <span class="icon-bar"></span>
 	    </button>
-	    <h2><a class="navbar-brand" href="#">#civilbooth</a></h2>
+	   
+	   <%= link_to "THYWORSHIP", root_path, class: "navbar-brand" %>
+	   <!--<h2><a class="navbar-brand" href="#">thyworship</a></h2>-->
 	  </div>
 
 	
@@ -20,19 +22,19 @@
 	    <ul class="nav navbar-nav navbar-right">
 
 	      
-	      <li><%= link_to "Home", root_path %></li>
-	      <li><%= link_to "About/Contact", about_path %></li> 
+	      <li><%= link_to "HOME", root_path %></li>
+	      <li><%= link_to "ABOUT/CONTACT", about_path %></li> 
 	      <% if user_signed_in? %>
-	      <li><%= link_to "Account Settings", edit_user_registration_path %></li>
-	      <li><%= link_to '+New Concern', new_pin_path %></li>
-          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+	      <li><%= link_to "SETTINGS", edit_user_registration_path %></li>
+	      <li><%= link_to '+COMMENT', new_pin_path %></li>
+          <li><%= link_to "LOG OUT", destroy_user_session_path, method: :delete %></li>
         <% else %>
-          <li><%= link_to "Sign in", new_user_session_path %></li>
+          <li><%= link_to "SIGN IN", new_user_session_path %></li>
         <% end %>
 	    </ul>
 
 	  </div><!-- /.navbar-collapse -->
-</nav>
+	 </nav>
 
 
 
