@@ -2,7 +2,13 @@
 
 
 
-    
+    <%= render 'pages/home' unless user_signed_in? %>
+    <%= form_tag pins_path, :method => 'get' , :id => "pins_search" do %>
+     
+      <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search", :name => nil, class: "btn btn-default btn-xs"  %>
+      </p>
       <!-- put sortable here-->
 
     <div id="pins">
