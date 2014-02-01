@@ -3,7 +3,6 @@ class CreatePins < ActiveRecord::Migration
     create_table :pins do |t|
       t.string :locationBuilding
       t.string :concern
-      t.string :pastor_name
 
       t.timestamps
     end

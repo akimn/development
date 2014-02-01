@@ -5,21 +5,21 @@ class Pin < ActiveRecord::Base
 	
 	
 	 validates :locationBuilding, presence: true
-	 validates :pastor_name, presence: true
+	 validates :clergyname, presence: true
 	 validates :concern, presence: true
 	
 
 	 validates :locationBuilding, length: { minimum: 2 }
 	 validates :locationBuilding, length: { maximum: 255 }
-	 validates :pastor_name, length: { minimum: 1 }
-	 validates :pastor_name, length: { maximum: 255 }
+	 validates :clergyname, length: { minimum: 1 }
+	 validates :clergyname, length: { maximum: 255 }
 	 validates :concern, length: { minimum: 1 }
 	 validates :concern, length: { maximum: 255 }
 
 
 	def self.search(search)
 	 if search	
-      	where('"locationBuilding" ILIKE ? OR "concern" ILIKE ?', "%#{search}%", "%#{search}%")
+      	where('"locationBuilding" ILIKE ? OR "concern" ILIKE ? OR "clergyName" ILIKE ?', "%#{search}%", "%#{search}%", "%#{search}%")
 	  else
 	    scoped
 	 end

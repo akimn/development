@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140201053952) do
+ActiveRecord::Schema.define(version: 20140201080156) do
 
   create_table "categories", force: true do |t|
     t.datetime "created_at"
@@ -48,9 +48,6 @@ ActiveRecord::Schema.define(version: 20140201053952) do
     t.datetime "created_at"
   end
 
-  add_index "mentions", ["mentionable_id", "mentionable_type"], name: "fk_mentionables"
-  add_index "mentions", ["mentioner_id", "mentioner_type"], name: "fk_mentions"
-
   create_table "pins", force: true do |t|
     t.string   "locationBuilding"
     t.string   "concern"
@@ -61,7 +58,7 @@ ActiveRecord::Schema.define(version: 20140201053952) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "user_id"
-    t.string   "pastor_name"
+    t.string   "clergyname"
   end
 
   add_index "pins", ["user_id"], name: "index_pins_on_user_id"
